@@ -4,7 +4,7 @@
 docker compose up --build
 ```
 
-then navigate to port 3000 and use my project
+then navigate to port 3000 and use my project OR [FitFuel](https://fit-fuel-frontend.vercel.app/)
 
 development tools:
 
