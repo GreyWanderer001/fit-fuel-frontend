@@ -1,4 +1,5 @@
 import {
+  Folders,
   Info,
   LogIn,
   LogOut,
@@ -57,9 +58,17 @@ export function Header() {
               <Link to="/login">Login</Link>
             </li>
           ) : (
-            <Button onClick={handleLogout} variant="ghost">
-              Logout
-            </Button>
+            <>
+              <li className={buttonVariants({ variant: "ghost" })}>
+                <Link to="/orders">Orders</Link>
+              </li>
+
+              <li>
+                <Button onClick={handleLogout} variant="ghost">
+                  Logout
+                </Button>
+              </li>
+            </>
           )}
         </ul>
 
@@ -107,10 +116,20 @@ export function Header() {
                     <span>Login</span>
                   </Link>
                 ) : (
-                  <button onClick={handleLogout} className="flex items-center">
-                    <LogOut className="mr-2 size-4" />
-                    <span>Logout</span>
-                  </button>
+                  <>
+                    <Link to="/orders" className="flex items-center">
+                      <Folders className="mr-2 size-4" />
+                      <span>Orders</span>
+                    </Link>
+
+                    <button
+                      onClick={handleLogout}
+                      className="flex items-center"
+                    >
+                      <LogOut className="mr-2 size-4" />
+                      <span>Logout</span>
+                    </button>
+                  </>
                 )}
               </ul>
             </SheetContent>
