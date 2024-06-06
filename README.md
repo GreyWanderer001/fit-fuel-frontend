@@ -17,7 +17,7 @@ python, typescript, javascript
 libs:
 
 ```
-flask, react, nest, prizma
+flask, react, nest, prizma, shadcnui
 ```
 
 tests:
